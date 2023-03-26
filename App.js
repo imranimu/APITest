@@ -3,6 +3,7 @@ import {StatusBar, StyleSheet, useColorScheme} from 'react-native';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import Route from './src/route'
 import allReducers from './src/reducers/allReducer';
 
 const store = createStore(allReducers);
@@ -39,7 +40,7 @@ const App = () => {
     return (
         <PaperProvider theme={isDarkMode ? DarkTheme : LightTheme}>
             <StatusBar
-                backgroundColor={isDarkMode ? '#20232a' : '#fff'}
+                backgroundColor={isDarkMode ? '#20232a' : '#f6fafe'}
                 barStyle={isDarkMode ? 'light-content' : 'dark-content'}
             />
             <Provider store={store}>

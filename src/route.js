@@ -16,28 +16,28 @@ export default function Route() {
 
     return (
         <NavigationContainer>
-          <Stack.Navigator>
+            <Stack.Navigator>
             {user.isUserLoggedIn == false ? (
-              <> 
+                <> 
                 <Stack.Screen
-                  name="Login"
-                  component={Login}
-                  options={({navigation}) => options}
+                    name="Login"
+                    component={Login}
+                    options={({navigation}) => options}
                 />
                 <Stack.Screen
-                  name="Signup"
-                  component={Signup}
-                  options={({navigation}) => options}
+                    name="Signup"
+                    component={Signup}
+                    options={({navigation}) => options}
                 />
-              </>
+                </>
             ) : (
-              <Stack.Screen
-                name="TabContainer"
+                <Stack.Screen
+                name="Profile"
                 component={Profile}
                 options={{headerShown: false}}
-              />
+                />
             )}
-          </Stack.Navigator>
+            </Stack.Navigator>
         </NavigationContainer>
       );
 }
